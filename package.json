@@ -1,6 +1,6 @@
 {
   "name": "z-mine-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "My cli tool for develop or else",
   "main": "index.js",
   "exports": "./index.js",
