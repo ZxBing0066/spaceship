@@ -117,7 +117,7 @@ const jobs = async (toolMap, pm) => {
     }
 };
 
-const configBasePath = path.resolve(__dirname, '../config/');
+const configBasePath = path.resolve(__dirname, './config/');
 const cwd = process.cwd();
 
 const checkFile = file => {
