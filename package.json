@@ -1,5 +1,5 @@
 {
-  "name": "e-cli",
+  "name": "z-mine-cli",
   "version": "0.0.1",
   "description": "My cli tool for develop or else",
   "main": "index.js",
