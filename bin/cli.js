@@ -77,13 +77,19 @@ const getPackages = toolMap => {
     return packages;
 };
 
+const isPnpmWorkspace = () => {
+    return fs.existsSync(path.resolve(cwd, 'pnpm-workspace.yaml'));
+};
+
 const installPackages = async (packages, pm) => {
     if (!packages.length) lUnimportant('No packages need to install');
     const command = (() => {
         const packagesString = packages.join(' ');
         switch (pm) {
-            case 'pnpm':
-                return `pnpm add ${packagesString} -D`;
+            case 'pnpm': {
+                const inWorkspace = isPnpmWorkspace();
+                return `pnpm add ${packagesString} -D` + inWorkspace ? ' -w' : '';
+            }
             case 'npm':
                 return `npm add ${packagesString} -D`;
             case 'yarn':
