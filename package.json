@@ -11,7 +11,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
-    "release": "standard-version",
+    "release": "standard-version && npm publish",
     "prepublishOnly": "git push --follow-tags origin master"
   },
   "repository": {
