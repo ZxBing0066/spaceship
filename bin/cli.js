@@ -88,7 +88,7 @@ const installPackages = async (packages, pm) => {
         switch (pm) {
             case 'pnpm': {
                 const inWorkspace = isPnpmWorkspace();
-                return `pnpm add ${packagesString} -D` + inWorkspace ? ' -w' : '';
+                return `pnpm add ${packagesString} -D` + (inWorkspace ? ' -w' : '');
             }
             case 'npm':
                 return `npm add ${packagesString} -D`;
