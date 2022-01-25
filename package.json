@@ -1,6 +1,6 @@
 {
   "name": "@z-space/cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Cli tool for develop or something else. Productivity 🚀",
   "main": "index.js",
   "exports": "./index.js",
